@@ -1,0 +1,120 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url('../img/geometry2.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Coda', cursive;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+#deck {
+    width: 660px;
+    min-height: 680px;
+    /*background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 0%);*/
+    border: 2px black;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 15px 40px rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+}
+
+#deck .card {
+    height: 125px;
+    width: 125px;
+    background: linear-gradient(160deg, #f4ae77 0%, #aa7ecd 100%);
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+#deck .card.open {
+    transform: rotateY(0);
+    background: linear-gradient(160deg, #85e2a3 0%, #f4ae77 100%);
+    cursor: default;
+}
+
+#deck .card.show {
+    font-size: 33px;
+}
+
+#deck .card.match {
+    cursor: default;
+    background: linear-gradient(160deg, #85e2a3 0%, #f4ae77 100%);
+    font-size: 33px;
+}
+
+#deck .card.unmatched {
+	background: #e2043b;
+}
+
+#deck .card.disabled {
+	pointer-events: none;
+	opacity: 0.8;
+}
+
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel {
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.stars {
+    margin: 0;
+    padding: 0;
+}
+
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+}
+
+.score-panel .restart {
+    cursor: pointer;
+}
+.timer {
+
+}

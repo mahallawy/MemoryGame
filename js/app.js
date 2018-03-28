@@ -201,15 +201,26 @@ function moveCounter(){
     }
 }
 
+function gameWin(){
+    if (matchedCard.length == 16){
+        clearInterval(interval);
+        finalTime = timer.innerHTML;
 
-// Function to close icon on game
-function closeGame(){
-    closeicon.addEventListener("click", function(e){
-        game.classList.remove("show");
-        startGame();
-    });
+        // Game win message pop up
+        modal.classList.add("show");
+
+        // declare star rating variable
+        var starRating = document.querySelector(".stars").innerHTML;
+
+        //Show total moves, final time, and stars score
+        document.getElementById("totalMoves").innerHTML = moves;
+        document.getElementById("finalTime").innerHTML = finalTime;
+        document.getElementById("starsResult").innerHTML = starRating;
+
+        //closeicon on modal
+        closeModal();
+    };
 }
-
 
 // Function for user to play Again
 function playAgain(){

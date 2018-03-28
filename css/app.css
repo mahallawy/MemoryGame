@@ -42,7 +42,6 @@ h1 {
 #deck {
     width: 660px;
     min-height: 680px;
-    /*background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 0%);*/
     border: 2px black;
     padding: 32px;
     border-radius: 10px;
@@ -115,6 +114,19 @@ h1 {
 .score-panel .restart {
     cursor: pointer;
 }
-.timer {
+#gameWin {
+  background: linear-gradient(160deg, #fcdec7 50%, #ffffff 80%);
+  width: 50%;
+  border-radius: 20px;
+  padding: 20px;
+  position: fixed;
+  display: none;
+}
 
+.inBox {
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
 }

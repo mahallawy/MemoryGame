@@ -21,7 +21,7 @@ let matchedCard = document.getElementsByClassName("match");
  let closeicon = document.querySelector(".close");
 
 // identify main game class
- let game = document.getElementById("popup1");
+ let game = document.getElementById("gameWin");
 
 // identify array for opened cards
 let openedCards = [];
@@ -77,7 +77,7 @@ for (var i = 0; i < cards.length; i++){
     card = cards[i];
     card.addEventListener("click", displayCard);
     card.addEventListener("click", cardOpen);
-    //card.addEventListener("click",congratulations);
+    card.addEventListener("click",gameWin);
 };
 
 // Function to add opened cards to OpenedCards list and check if cards are match or not
@@ -185,7 +185,7 @@ function moveCounter(){
         startTimer();
     }
     // setting rates based on moves
-    if (moves > 6 && moves < 14){
+    if (moves > 9 && moves < 14){
         for( i= 0; i < 3; i++){
             if(i > 1){
                 stars[i].style.visibility = "collapse";
@@ -207,7 +207,7 @@ function gameWin(){
         finalTime = timer.innerHTML;
 
         // Game win message pop up
-        modal.classList.add("show");
+        game.classList.add("show");
 
         // declare star rating variable
         var starRating = document.querySelector(".stars").innerHTML;
@@ -216,9 +216,6 @@ function gameWin(){
         document.getElementById("totalMoves").innerHTML = moves;
         document.getElementById("finalTime").innerHTML = finalTime;
         document.getElementById("starsResult").innerHTML = starRating;
-
-        //closeicon on modal
-        closeModal();
     };
 }
 
@@ -227,10 +224,3 @@ function playAgain(){
     game.classList.remove("show");
     startGame();
 }
-
-
-
-/*
- * set up the event listener for a card. If a card is clicked:
- *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
- */

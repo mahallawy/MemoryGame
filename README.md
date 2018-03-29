@@ -1,20 +1,15 @@
 # Memory Game Project
 
-## Table of Contents
+## What is it?
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
+It is game project for Udacity Nanodegree for FrontEnd track.
 
-## Instructions
 
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+## How to use
 
-To get started, open `js/app.js` and start building out the app's functionality
+click on the photos to find the matched photos in the best time and minimum moves.
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
 
 ## Contributing
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
-
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+If you have any ideas or improvements please do and I will check it and then pull it if it is applicable.

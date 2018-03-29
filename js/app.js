@@ -182,7 +182,7 @@ function startTimer() {
 // Function to calculate moves
 function moveCounter() {
   moves++;
-  counter.innerHTML = moves;
+  counter.textContent = moves;
   //start timer on first click
   if (moves == 1) {
     second = 1;

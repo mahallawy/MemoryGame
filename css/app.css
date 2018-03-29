@@ -37,7 +37,7 @@ h1 {
  */
 
 #deck {
-  width: 660px;
+  width: 60%;
   min-height: 680px;
   border: 2px black;
   padding: 32px;
@@ -150,4 +150,17 @@ button {
 
 #starsResult li {
   display: inline-block;
+}
+
+/***********************************
+          Media Queiry
+***********************************/
+
+@media (max-width: 1200px) {
+
+.card {
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+	}
 }

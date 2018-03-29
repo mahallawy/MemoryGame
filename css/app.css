@@ -114,19 +114,41 @@ h1 {
 .score-panel .restart {
     cursor: pointer;
 }
-#gameWin {
-  background: linear-gradient(160deg, #fcdec7 50%, #ffffff 80%);
-  width: 50%;
-  border-radius: 20px;
-  padding: 20px;
+.gameWinClass {
   position: fixed;
-  display: none;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	transition: opacity 500ms;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.gameWinClass:target {
+	visibility: visible;
+	opacity: 1;
 }
 
 .inBox {
+  margin: 70px auto;
+	padding: 20px;
+	background: linear-gradient(160deg, #f4ae77 20%, #ffffff 90%);
+	border-radius: 5px;
+	width: 60%;
+	position: relative;
   text-align: center;
+}
+
+.show {
+	visibility: visible !important;
+	opacity: 100 !important;
 }
 
 button {
   cursor: pointer;
+}
+#starsResult li {
+	display: inline-block;
 }
